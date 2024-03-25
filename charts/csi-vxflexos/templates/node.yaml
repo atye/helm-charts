@@ -303,7 +303,7 @@ spec:
             - name: udev-d
               mountPath: /rules.d
             - name: host-opt-emc-path
-              mountPath: /host_opt_emc_path
+              mountPath: /host_path
         {{- end }}
       initContainers:
         - name: sdc
@@ -331,11 +331,11 @@ spec:
             - name: os-release
               mountPath: /host-os-release
             - name: host-opt-emc-path
-              mountPath: /host_opt_emc_path
+              mountPath: /host_path
             - name: sdc-storage
               mountPath: /storage 
             - name: host-opt-emc-path
-              mountPath: /host_opt_emc_path
+              mountPath: /host_path
             - name: udev-d
               mountPath: /rules.d
             - name: scaleio-path-opt
