@@ -64,6 +64,13 @@ imagePullPolicy: IfNotPresent
 # Default Value: None
 externalAccess:
 
+# cipher suites, pass values in a list
+# Example
+# cipherSuites:
+#   - cipher1
+#   - cipher2
+cipherSuites:
+
 # enableQuota: a boolean that, when enabled, will set quota limit for a newly provisioned NFS volume.
 # Allowed values:
 #   true: set quota for volume
