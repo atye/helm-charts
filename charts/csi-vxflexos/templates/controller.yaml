@@ -430,7 +430,7 @@ spec:
             - name: X_CSI_POWERFLEX_EXTERNAL_ACCESS
               value: {{ .Values.externalAccess }}
             - name: X_CSI_POWERFLEX_CIPHER_SUITES
-              value: {{- toYaml .Values.cipherSuites | nindent 16 }}
+              value: "{{- .Values.cipherSuites | join "," }}"
           volumeMounts:
             - name: socket-dir
               mountPath: /var/run/csi
