@@ -224,6 +224,8 @@ spec:
                 fieldRef:
                   apiVersion: v1
                   fieldPath: spec.nodeName
+            - name: X_CSI_POWERFLEX_CIPHER_SUITES
+              value: "{{- .Values.cipherSuites | join "," }}"
           volumeMounts:
             - name: driver-path
               mountPath: {{ .Values.kubeletConfigDir }}/plugins/vxflexos.emc.dell.com
